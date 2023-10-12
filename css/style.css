@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    /* this will scale depending on the size of device being  used */
+    width: 100vw;
+    min-height: 100vh;
+}
+img{
+    /* default image size to be 100% the width of the parent container - this helps us mangage the size better */
+    width: 100%;
+}
+section{
+    /* width will be 100% of the parent container */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    
+}
+.left{
+    width: 70%;
+    background-image: url('../images/bike-left.jpg');
+    background-size: cover;
+    transform: skew(-0.06turn, 18deg);
+}
+.right{
+    width: 27%;
+}
