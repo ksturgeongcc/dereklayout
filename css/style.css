@@ -1,32 +1,96 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body{
-    /* this will scale depending on the size of device being  used */
-    width: 100vw;
-    min-height: 100vh;
-}
-img{
-    /* default image size to be 100% the width of the parent container - this helps us mangage the size better */
-    width: 100%;
-}
-section{
-    /* width will be 100% of the parent container */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    height: 500px;
-    
-}
-.left{
-    width: 70%;
-    background-image: url('../images/bike-left.jpg');
-    background-size: cover;
-    transform: skew(-0.06turn, 18deg);
-}
-.right{
-    width: 27%;
-}
+/* I used CHATGPT to comment the code */
+
+* {
+    padding: 0;               /* Reset padding to 0 for all elements */
+    margin: 0;                /* Reset margin to 0 for all elements */
+    box-sizing: border-box;    /* Ensure that padding and border are included in the element's total width/height */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Set a default font for all text elements */
+  }
+  
+  /* Styles for the <body> element */
+  
+  body {
+    /* The following styles make the body element responsive and center its content */
+    width: 100vw;              /* Set the width to 100% of the viewport width */
+    min-height: 100vh;         /* Set the minimum height to 100% of the viewport height */
+    display: flex;             /* Use flexbox to center the content horizontally */
+    justify-content: center;   /* Center the content horizontally */
+  }
+  
+  /* Styles for <img> elements */
+  
+  img {
+    width: 100%;               /* Set the width of all images to 100% of their parent container */
+  }
+  
+  /* Styles for <section> elements */
+  
+  section {
+    width: 96%;                /* Set the width of the section to 96% of its parent container */
+    display: flex;             /* Use flexbox for layout */
+    justify-content: space-between; /* Space between child elements */
+    height: 50vh;              /* Set the height to 50% of the viewport height */
+    position: relative;        /* Establish a positioning context for child elements */
+    overflow: hidden;          /* Hide content that overflows the section */
+    margin-top: 2%;            /* Add some top margin to the section */
+  }
+  
+  /* Styles for elements with the class "right" */
+  
+  .right {
+    width: 26%;                /* Set the width to 26% of the parent container */
+    clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+    /* Apply a clip-path to create a slanted edge on the right side */
+    display: flex;             /* Use flexbox for layout */
+    flex-direction: column;    /* Stack child elements vertically */
+    justify-content: space-between; /* Space between child elements */
+    position: absolute;        /* Position the element absolutely within its parent */
+    height: 100%;              /* Set the height to 100% of the parent container */
+    right: 0;                  /* Position it on the right edge of its parent */
+    top: 0;                    /* Position it at the top of its parent */
+  }
+  
+  /* Styles for elements with the class "left" */
+  
+  .left {
+    width: 79%;                /* Set the width to 79% of the parent container */
+    padding: 20px;             /* Add padding to the element */
+    background-image: url(../images/bike-left.jpg); /* Set a background image */
+    clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
+    /* Apply a clip-path to create a slanted edge on the left side */
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    background-size: cover;    /* Cover the element with the background image */
+    position: absolute;        /* Position the element absolutely within its parent */
+    height: 100%;              /* Set the height to 100% of the parent container */
+    left: 0;                   /* Position it on the left edge of its parent */
+    top: 0;                    /* Position it at the top of its parent */
+  }
+  
+  /* Styles for elements with the classes "one", "two", and "three" */
+  
+  .one,
+  .two,
+  .three {
+    background-size: cover;   /* Cover the element with the background image */
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    height: 30%;              /* Set the height to 30% of the parent container */
+  }
+  
+  /* Styles specific to the element with the class "one" */
+  
+  .one {
+    background-image: url(../images/bike-right1.jpg); /* Set a background image */
+  }
+  
+  /* Styles specific to the element with the class "two" */
+  
+  .two {
+    background-image: url(../images/bike-right2.jpg); /* Set a background image */
+  }
+  
+  /* Styles specific to the element with the class "three" */
+  
+  .three {
+    background-image: url(../images/bike-right3.jpg); /* Set a background image */
+  }
+  
